@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper & Scissors</title>
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking JavaScript File -->
+    <script src="index.js"></script>
+
+    <!-- Barlow Condensed Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="Container">
+      <div class="ScoreBoard">
+        <div class="Title">
+          <img src="Images/Title.png" />
+        </div>
+        <div class="Score">
+          <p>SCORE</p>
+          <h1>0</h1>
+        </div>
+      </div>
+
+      <div class="Hands">
+        <div class="Hand Rock">
+          <img src="Images/Rock.png" onclick="PickUserHand('Rock')" />
+        </div>
+        <div class="Hand Paper">
+          <img src="Images/Paper.png" onclick="PickUserHand('Paper')" />
+        </div>
+        <div class="Hand Scissors">
+          <img src="Images/Scissors.png" onclick="PickUserHand('Scissors')" />
+        </div>
+      </div>
+      <div class="Contest">
+        <div class="UserHand">
+          <h1>YOU PICKED</h1>
+          <div class="HandImageContainer">
+            <img src="Images/Rock.png" id="UserPickedImage" />
+          </div>
+        </div>
+        <div class="Refree">
+          <div class="DecisionMaker"><h1>YOU WIN!</h1></div>
+          <div class="PlayAgain" onclick="PlayAgain()">PLAY AGAIN</div>
+        </div>
+        <div class="CompHand">
+          <h1>COMPUTER PICKED</h1>
+          <div class="CompImageContainer">
+            <img src="Images/Paper.png" id="CompPickedImage" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
